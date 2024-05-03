@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="airtimeGen.css">
+</head>
+<body>
+    <label for="airtime"> airtime</label>
+    <select id="airtime">
+        <option value=""> choose network </option>
+        <option value="mtn"> mtn </option>
+        <option value="airtel"> airtel </option>
+        <option value="glo"> glo </option>
+        <option value="9mobile"> 9mobile </option>
+    </select>
+
+    <label for="amount"> amount</label>
+    <select id="amount">
+        <option value=""> choose amount </option>
+        <option value="100"> 100 </option>
+        <option value="200"> 200 </option>
+        <option value="500">500 </option>
+        <option value="1000"> 1000 </option>
+    </select>
+
+    <div>
+        <button onclick="generate()"> generate pin</button>
+        <h1 id="thePin"> </h1>
+    </div>
+
+
+    <input type="text" id="recharger">
+    <button onclick="loadAirtime()"> load </button>
+
+    <h1> Balance: <span id="balance"> </span> </h1>
+
+
+    <table>
+        <thead>
+            <th> s/n </th>
+            <th> provider </th>
+            <th> amount </th>
+            <th> used </th>
+            <th> date created </th>
+            <th> pin </th>
+        </thead>
+
+        <tbody id="tbody"></tbody>
+    </table>
+
+</body>
+</html>
+<script src="./airtimeGen.js"></script>
